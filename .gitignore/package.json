@@ -1,6 +1,6 @@
 {
 "name": "KuizBot",
-"version": "1.0.0"
+"version": "1.0.0",
 "description": "un KuizBot et voila",
 "main": "index.js",
 "scripts":{
