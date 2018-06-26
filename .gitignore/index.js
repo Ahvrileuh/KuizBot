@@ -36,7 +36,7 @@ clientDiscord.on('ready', ()=> {
 	console.log("JOSSE is ready");
 });
 
-clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhRczw.WeFgz54unOiaQAILKGYJA7d0DRc');
+clientDiscord.login(process.env.TOKEN);
 
 	clientDiscord.on('message', message => {
 
