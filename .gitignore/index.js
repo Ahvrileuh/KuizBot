@@ -22,7 +22,7 @@ clientDiscord.on('ready', ()=> {
 	clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT READY** !');
 });
 
-clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhRczw.WeFgz54unOiaQAILKGYJA7d0DRc');
+clientDiscord.login(process.env.TOKEN);
 
 	clientDiscord.on('message', message => {
 	if(botOn == true){
