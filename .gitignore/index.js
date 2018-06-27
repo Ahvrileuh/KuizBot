@@ -30,7 +30,7 @@ clientDiscord.login(process.env.TOKEN);
 		if(message.content === prefix + "bot[on]")
 		{
 			message.channel.send("///BOT ON///");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  OUT** !');
+			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  ON** !');
 			botOn = true;
 		}
 	}
