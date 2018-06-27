@@ -615,23 +615,9 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("le resultat est : **" + Dice + "**");
 				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice ** used !')
 		}
-		
-		if(message.content === "!dice[100]*")
-		{
-				message.channel.send("**Dé à 100 putain de faces lancé !**");
-				random100();
-				message.channel.send("le resultat est : **" + Chance + "**");
-				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice s ** used !')
-		}
 	}
 
 });
-
-	/*clientDiscord.on('guildMember',(member, )  => {
-		console.log('User' + member.user.name + 'has joined');
-		var roleGuild = member.guild.roles.find('name', 'membre');
-		member.addRole(roleGuid);
-	});*/
 
 function random(min, max){
 	min = Math.ceil(1);
