@@ -23,7 +23,7 @@ clientDiscord.on('ready', ()=> {
 	clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT READY** !');
 });
 
-clientDiscord.login(process.env.TOKEN);
+clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA');
 
 	clientDiscord.on('message', message => {
 
@@ -38,7 +38,6 @@ clientDiscord.login(process.env.TOKEN);
 	}
 
 	if(botOn == true){
-
 		const guildMember = message.member;
 
 	if(message.content === prefix + "rom1")
@@ -435,31 +434,37 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 
 	if(message.content === prefix + "love")
 	{
-		//role = message.member.role("STALINE");
+
 		message.reply("***:heart::heart:love:heart::heart:***");
 		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !love ** used !');
 	}
 
+	if(message.content === prefix + "var")
+	{
+
+		message.channel.send("var = " + Qresult);
+	}
+
 	if(message.content === "les bots c tro mes bb")
 	{
-		//role = message.member.role("STALINE");
+
 		message.react("♥");
 		message.react("👍");
 	}
 
 		if(message.content === prefix + "reset[JOSSE]")
 		{
-			var Qresult = 0;
-			var TestMode = false;
-			var QuizzMode = false;
-			var red = 0;
-			var green = 0;
-			var blue = 0;
-			var yellow = 0;
-			var Dice = 0;
-			var Chance = 0;
-			var name = "";
-			var role = "";
+			Qresult = 0;
+			TestMode = false;
+			QuizzMode = false;
+			red = 0;
+			green = 0;
+			blue = 0;
+			yellow = 0;
+			Dice = 0;
+			Chance = 0;
+			name = "";
+			role = "";
 
 			message.channel.send("**/// BOT RESET ///**");
 			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !reset ** used !');
