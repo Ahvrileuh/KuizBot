@@ -27,6 +27,7 @@ clientDiscord.login(process.env.TOKEN);
 	clientDiscord.on('message', message => {
 
 	if(botOn == false){
+		clientDiscord.user.setPresence({ game: { name: 'bot out !', type: 0}});
 		if(message.content === prefix + "bot[on]")
 		{
 			message.channel.send("///BOT ON///");
@@ -36,7 +37,7 @@ clientDiscord.login(process.env.TOKEN);
 	}
 
 	if(botOn == true){
-
+		clientDiscord.user.setPresence({ game: { name: '!cmd', type: 0}});
 		const guildMember = message.member;
 
 	if(message.content === prefix + "rom1")
