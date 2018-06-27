@@ -27,8 +27,8 @@ clientDiscord.login(process.env.TOKEN);
 	clientDiscord.on('message', message => {
 
 	if(botOn == false){
-		clientDiscord.user.setPresence({ game: { name: 'bot out !', type: 0}});
-		if(message.content === prefix + "bot[on]")
+
+		if(message.content === prefix + "bot[on]" && message.author.tag == "Avril#8268")
 		{
 			message.channel.send("///BOT ON///");
 			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  ON** !');
@@ -37,7 +37,7 @@ clientDiscord.login(process.env.TOKEN);
 	}
 
 	if(botOn == true){
-		clientDiscord.user.setPresence({ game: { name: '!cmd', type: 0}});
+
 		const guildMember = message.member;
 
 	if(message.content === prefix + "rom1")
@@ -45,7 +45,7 @@ clientDiscord.login(process.env.TOKEN);
 		message.channel.send("il é tro faur")
 	}
 
-	if(message.content === prefix + "bot[out]")
+	if(message.content === prefix + "bot[out]" && message.author.tag == "Avril#8268")
 	{
 		message.channel.send("///BOT OUT///");
 		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  OUT** !');
