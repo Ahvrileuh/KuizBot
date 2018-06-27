@@ -612,8 +612,16 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 		{
 				message.channel.send("**Dé à 100 putain de faces lancé !**");
 				randomDICE100();
-				message.channel.send("le resultat est : **" + Dice+ "**");
+				message.channel.send("le resultat est : **" + Dice + "**");
 				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice ** used !')
+		}
+		
+		if(message.content === "!dice[100]*")
+		{
+				message.channel.send("**Dé à 100 putain de faces lancé !**");
+				random100();
+				message.channel.send("le resultat est : **" + Chance + "**");
+				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice s ** used !')
 		}
 	}
 
