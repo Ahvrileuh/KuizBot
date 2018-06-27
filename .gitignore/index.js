@@ -15,6 +15,7 @@ var Dice = 0;
 var Chance = 0;
 var name = "";
 var role = "";
+var tag = "";
 
 clientDiscord.on('ready', ()=> {
 	clientDiscord.user.setPresence({ game: { name: '!cmd', type: 0}});
