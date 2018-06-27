@@ -1,23 +1,10 @@
-//import { Guild } from 'discord.js';
-
 const Discord = require('discord.js');
-//const low = require('lowdb')
-//const FileSync = require('lowdb/adapters/FileSync')
-
-//const adapter = new FileSync('database.json');
-//const db = low(adapter);
-
-//db.defaults({ histoires: []});
-
 const clientDiscord = new Discord.Client();
 
 var prefix = ("!");
-var num = 1;
-var angryLevel = -1;
-var Copy = 10;
+var botOn = true;
 var Qresult = 0;
 var TestMode = false;
-
 
 var QuizzMode = false;
 var red = 0;
@@ -26,20 +13,19 @@ var blue = 0;
 var yellow = 0;
 var Dice = 0;
 var Chance = 0;
-//var delay = setTimeout("instructions", 5000);
 var name = "";
 var role = "";
-var cmdChannel = "";
 
 clientDiscord.on('ready', ()=> {
 	clientDiscord.user.setPresence({ game: { name: '!cmd', type: 0}});
 	console.log("JOSSE is ready");
+	clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT READY** !');
 });
 
-clientDiscord.login(process.env.TOKEN);
+clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhRczw.WeFgz54unOiaQAILKGYJA7d0DRc');
 
 	clientDiscord.on('message', message => {
-
+	if(botOn == true){
 		const guildMember = message.member;
 		//guildMember.addRole(config.n);
 
@@ -48,18 +34,18 @@ clientDiscord.login(process.env.TOKEN);
 		message.channel.send("il é tro faur")
 	}
 
+	if(message.content === prefix + "bot[out]")
+	{
+		message.channel.send("///BOT OUT///");
+		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  OUT** !');
+	}
+
 	if(message.content === prefix + "cmd")
 	{
 		name = message.author.username;
 		if(message.guild.name == "L'Asile"){
 		message.channel.send("Les commandes du bot : "+
 			"**POUR JULIEN**"+
-			"```"+
-			"//!bonjour//"+
-			"```"+
-			"```"+
-			"//!josse ?//"+
-			"```"+
 			"```"+
 			"!addRole[votre role] (voir le channel role manager)"+
 			"```"+
@@ -445,15 +431,11 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 
 		if(message.content === prefix + "reset[JOSSE]")
 		{
-			angryLevel = -1;
+			name = "";
+			tag = "";
+
 			message.channel.send("**/// BOT RESET ///**");
 			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !reset ** used !');
-		}
-
-		if(angryLevel > 10) 
-		{ 
-			angryLevel = -1;
-			message.channel.send("**/// BOT RESET ///**");
 		}
 
 		if(message.content === prefix + "mode[CHALLENGER]" && QuizzMode == false && message.author.username == "Avril")
@@ -470,7 +452,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[CHALLENGER] ** used by unknown !');
 		}
 
-		else if(message.content === prefix + "mode[out]" && message.author.username == "Avril" && QuizzMode == true)
+		else if(message.content === prefix + "mode[out]" && message.author.tag == "Avril#8268" && QuizzMode == true)
 		{
 				QuizzMode = false;
 				red = 0;
@@ -482,13 +464,13 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("***tout revient à la normale...***");
 				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[out] ** used !');
 		}
-		else if (message.content === prefix + "mode[out]" && message.author.username != "Avril" && QuizzMode == true)
+		else if (message.content === prefix + "mode[out]" && message.author.tag != "Avril#8268" && QuizzMode == true)
 		{
 			message.channel.send("**Noraj de mon modaj !** Je n'obéis pas aux *losers* de ton genre gamin !");
 			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[out] ** used by unknown !');
 		}
 
-		if(message.content === "+[green]" && QuizzMode == true && message.author.username == "Avril") 
+		if(message.content === "+[green]" && QuizzMode == true && message.author.tag == "Avril#8268") 
 		{
 				message.channel.send("**EQUIPE VERTE REMPORTE 1 POINT !**");
 				green += 1;
@@ -502,14 +484,14 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 					message.channel.send("score total de l'équipe **vert** : " + green);
 				}
 		}
-		else if(message.content === "-[green]" && QuizzMode == true && message.author.username == "Avril")
+		else if(message.content === "-[green]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("*1 point en moins à l'équipe verte... wallah chui triteuh*");
 				green -= 1;
 				message.channel.send("score total de l'équipe **verte** : " + green);
 		}
 
-		if(message.content === "+[red]" && QuizzMode == true && message.author.username == "Avril")
+		if(message.content === "+[red]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("**EQUIPE ROUGE REMPORTE 1 POINT !**");
 				red += 1;
@@ -524,7 +506,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 
 				}
 		}
-		else if(message.content === "-[red]" && QuizzMode == true && message.author.username == "Avril")
+		else if(message.content === "-[red]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("*1 point en moins à l'équipe rouge... RIP*");
 				red -= 1;
@@ -534,7 +516,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				}
 		}
 
-		if(message.content === "+[yellow]" && QuizzMode == true && message.author.username == "Avril")
+		if(message.content === "+[yellow]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("**EQUIPE JAUNE REMPORTE 1 POINT !**");
 				yellow += 1;
@@ -548,14 +530,14 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 					message.channel.send("score total de l'équipe **jaune** : " + yellow);
 				}
 		}
-		else if(message.content === "-[yellow]" && QuizzMode == true && message.author.username == "Avril")
+		else if(message.content === "-[yellow]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("*1 point en moins à l'équipe jaune... t'es serieux le MJ ?!*");
 				yellow -= 1;
 				message.channel.send("score total de l'équipe **jaune** : " + yellow);
 		}
 
-		if(message.content === "+[blue]" && QuizzMode == true && message.author.username == "Avril")
+		if(message.content === "+[blue]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("**EQUIPE BLEUE REMPORTE 1 POINT !**");
 				blue += 1;
@@ -571,7 +553,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 					
 				}
 		}
-		else if(message.content === "-[blue]" && QuizzMode == true && message.author.username == "Avril")
+		else if(message.content === "-[blue]" && QuizzMode == true && message.author.tag == "Avril#8268")
 		{
 				message.channel.send("*1 point en moins à l'équipe bleu... c'est la faute du MJ les gars !*");
 				blue -= 1;
@@ -603,6 +585,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				randomDICE100();
 				message.channel.send("le resultat est : **" + Dice+ "**");
 		}
+	}
 
 });
 
