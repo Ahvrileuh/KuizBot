@@ -150,7 +150,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 		random10();
 		if(Qresult == 1)///////////////////////////////////////////////////////
 		{
-			message.channel.send("**QUESTION DE LA SEMAINE N°1 :** *Quand et où est né Staline ?* (notez dans le chat '!A' ou '!B')"+
+			message.channel.send("**QUESTION DE LA SEMAINE N°1 :** *Quand et où est né Staline ?* (notez dans le chat '!A', '!B' ou '!C')"+
 			"``` Réponse A : Le 18 décembre 1878 à Gori (en Géorgie actuelle)```"+
 			"``` Réponse B : Le 21 mars 1889 à Leningrad (Saint-Pétersbourg actuelle)```"+
 			"``` Réponse C : Le 32 avril 1989 à Volgograd```"
@@ -159,7 +159,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 		}
 		if(Qresult == 2)///////////////////////////////////////////////////////
 		{
-			message.channel.send("**QUESTION DE LA SEMAINE N°2 :** *Combien de WhatTheCut Antoine Daniel a-t-il sorti ?* (notez dans le chat '!A' ou '!B')"+
+			message.channel.send("**QUESTION DE LA SEMAINE N°2 :** *Combien de WhatTheCut Antoine Daniel a-t-il sorti ?* (notez dans le chat '!A', '!B' ou '!C')"+
 			"``` Réponse A : 35```"+
 			"``` Réponse B : 37```"+
 			"``` Réponse C : 40```"
@@ -168,7 +168,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 		}
 		if(Qresult == 3)///////////////////////////////////////////////////////
 		{
-			message.channel.send("**QUESTION DE LA SEMAINE N°3 :** *Quel est le vrai nom de L dans le manga Death Note ?* (notez dans le chat '!A' ou '!B')"+
+			message.channel.send("**QUESTION DE LA SEMAINE N°3 :** *Quel est le vrai nom de L dans le manga Death Note ?* (notez dans le chat '!A', '!B' ou '!C')"+
 			"``` Réponse A : L Lawliet ```"+
 			"``` Réponse B : L Ryuzaki```"+
 			"``` Réponse C : L Ryuga```"
@@ -177,7 +177,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 		}
 		if(Qresult == 4)///////////////////////////////////////////////////////
 		{
-			message.channel.send("**QUESTION DE LA SEMAINE N°4 :** *Quelle est le nom du hero du manga Psycho-Pass* (notez dans le chat '!A' ou '!B')"+
+			message.channel.send("**QUESTION DE LA SEMAINE N°4 :** *Quelle est le nom du hero du manga Psycho-Pass* (notez dans le chat '!A', '!B' ou '!C')"+
 			"``` Réponse A : Akane Tsunemori```"+
 			"``` Réponse B : Sho Hinakawa```"+
 			"``` Réponse C : Shinya Kōgami```"
@@ -186,7 +186,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 		}
 		if(Qresult == 5)///////////////////////////////////////////////////////
 		{
-			message.channel.send("**QUESTION DE LA SEMAINE N°5 :** *Dans le film Alien de Ridley Scott, quel est le nom de l'héroïne ?* (notez dans le chat '!A' ou '!B')"+
+			message.channel.send("**QUESTION DE LA SEMAINE N°5 :** *Dans le film Alien de Ridley Scott, quel est le nom de l'héroïne ?* (notez dans le chat '!A', '!B' ou '!C')"+
 			"``` Réponse A : Amanda Ripley```"+
 			"``` Réponse B : Ellen Ripley ```"+
 			"``` Réponse C : Rebecca Jorden```"
@@ -196,7 +196,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 
 		if(Qresult == 6)///////////////////////////////////////////////////////
 		{
-			message.channel.send("**QUESTION DE LA SEMAINE N°6 :** *Vous pensez que mon programme contient :* (notez dans le chat '!A' ou '!B')"+
+			message.channel.send("**QUESTION DE LA SEMAINE N°6 :** *Vous pensez que mon programme contient :* (notez dans le chat '!A', '!B' ou '!C')"+
 			"``` Réponse A : 150 lignes de code```"+
 			"``` Réponse B : 600 lignes de code ```"+
 			"``` Réponse C : 50 lignes de code```"
