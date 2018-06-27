@@ -15,7 +15,6 @@ var Dice = 0;
 var Chance = 0;
 var name = "";
 var role = "";
-var tag = "";
 
 clientDiscord.on('ready', ()=> {
 	clientDiscord.user.setPresence({ game: { name: '!cmd', type: 0}});
@@ -146,7 +145,7 @@ clientDiscord.login(process.env.TOKEN);
 	if(message.content === prefix + "quiz")
 	{
 
-		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !quiz ** used !');
+		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !quiz ** used !');
 		tag = message.author.tag
 		random10();
 		if(Qresult == 1)///////////////////////////////////////////////////////
@@ -330,12 +329,12 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			role = message.guild.roles.find('name', 'Fortnoob');
 			guildMember.addRole(role);
 			message.channel.send("vous êtes désormais un **Fortnoob**");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used !');
 		}
 	
 		if(message.guild.name != "L'Asile"){
 			message.channel.send("*Ce rôle existe, mais pas dans ce serveur !*");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used outside the server !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used outside the server !');
 		}
 	}
 
@@ -345,12 +344,12 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			role = message.guild.roles.find('name', 'Paydouille');
 			guildMember.addRole(role);
 			message.channel.send("vous êtes désormais un membre **Paydouille**");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used !');
 		}
 	
 		if(message.guild.name != "L'Asile"){
 			message.channel.send("*Ce rôle existe, mais pas dans ce serveur !*");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used outside the server !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used outside the server !');
 		}
 	}
 
@@ -360,12 +359,12 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			role = message.guild.roles.find('name', 'DOOOOM');
 			guildMember.addRole(role);
 			message.channel.send("vous êtes désormais un membre **DOOM**");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used !');
 		}
 	
 		if(message.guild.name != "L'Asile"){
 			message.channel.send("*Ce rôle existe, mais pas dans ce serveur !*");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used outside the server !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used outside the server !');
 		}
 	}
 
@@ -375,12 +374,12 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			role = message.guild.roles.find('name', 'Auverouatch');
 			guildMember.addRole(role);
 			message.channel.send("vous êtes désormais un membre de la **overwatch** team");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used !');
 		}
 	
 		if(message.guild.name != "L'Asile"){
 			message.channel.send("*Ce rôle existe, mais pas dans ce serveur !*");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used outside the server !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used outside the server !');
 		}
 	}
 
@@ -390,19 +389,19 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			role = message.guild.roles.find('name', '**noob**');
 			guildMember.addRole(role);
 			message.channel.send("vous êtes désormais un gros **noob**");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used !');
 		}
 	
 		if(message.guild.name != "L'Asile"){
 			message.channel.send("*Ce rôle existe, mais pas dans ce serveur !*");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !addRole ** used outside the server !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !addRole ** used outside the server !');
 		}
 	}
 
 	if(message.content === prefix + "botnews" && message.author.tag != "Avril#8268")
 	{
 		message.channel.send("les commandes ** !dice, dice[8] et !dice[100]** ont été unlock !");
-		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !botnews ** used !');
+		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !botnews ** used !');
 	}
 
 	if(message.content === prefix + "botnews" && message.author.tag == "Avril#8268")
@@ -414,7 +413,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 	{
 		tag = message.channel.id;
 		message.channel.send("id : " + tag);
-		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !channel.id ** used !');
+		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !channel.id ** used !');
 
 	}
 
@@ -422,7 +421,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 	{
 		name = message.author.username;
 		message.channel.send("votre nom est " + name);
-		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !name ** used !');
+		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !name ** used !');
 
 	}
 
@@ -430,14 +429,14 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 	{
 		role = message.author.tag;
 		message.channel.send("votre tag est " + role);
-		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !tag ** used !');
+		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !tag ** used !');
 	}
 
 	if(message.content === prefix + "love")
 	{
 		//role = message.member.role("STALINE");
 		message.reply("***:heart::heart:love:heart::heart:***");
-		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !love ** used !');
+		clientDiscord.channels.get("460064153424494604").send('**:black_circle: !love ** used !');
 	}
 
 	if(message.content === "les bots c tro mes bb")
@@ -462,7 +461,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 			var role = "";
 
 			message.channel.send("**/// BOT RESET ///**");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !reset ** used !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !reset ** used !');
 		}
 
 		if(message.content === prefix + "mode[CHALLENGER]" && QuizzMode == false && message.author.username == "Avril")
@@ -470,13 +469,13 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				 message.channel.send("**MODE CHALLENGER ACTIVÉ** jusqu'à *4* joueurs (rouge, jaune, vert et bleu) et un **MJ**");
 				 QuizzMode = true;
 				 GameMode = true;
-				 clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[CHALLENGER] ** used !');
+				 clientDiscord.channels.get("460064153424494604").send('**:black_circle: !mode[CHALLENGER] ** used !');
 		} 
 
 		else if (message.content === prefix + "mode[CHALLENGER]" && QuizzMode == false && message.author.username != "Avril")
 		{
 			message.channel.send("Vous n'etes pas qualifié pour parler de ce mode !");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[CHALLENGER] ** used by unknown !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !mode[CHALLENGER] ** used by unknown !');
 		}
 
 		else if(message.content === prefix + "mode[out]" && message.author.tag == "Avril#8268" && QuizzMode == true)
@@ -489,12 +488,12 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				Dice = 0;
 				Chance = 0;
 				message.channel.send("***tout revient à la normale...***");
-				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[out] ** used !');
+				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !mode[out] ** used !');
 		}
 		else if (message.content === prefix + "mode[out]" && message.author.tag != "Avril#8268" && QuizzMode == true)
 		{
 			message.channel.send("**Noraj de mon modaj !** Je n'obéis pas aux *losers* de ton genre gamin !");
-			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !mode[out] ** used by unknown !');
+			clientDiscord.channels.get("460064153424494604").send('**:black_circle: !mode[out] ** used by unknown !');
 		}
 
 		if(message.content === "+[green]" && QuizzMode == true && message.author.tag == "Avril#8268") 
@@ -597,7 +596,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("**Dé à 6 faces lancé !**");
 				random();
 				message.channel.send("le resultat est : **" + Dice + "**") ;
-				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !dice ** used !');
+				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice ** used !');
 		}
 
 		if(message.content === "!dice[8]")
@@ -605,7 +604,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("**Dé à 8 faces lancé !**");
 				random8();
 				message.channel.send("le resultat est : **" + Dice + "**");
-				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !dice ** used !')
+				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice ** used !')
 		}
 
 		if(message.content === "!dice[100]")
@@ -613,7 +612,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("**Dé à 100 putain de faces lancé !**");
 				randomDICE100();
 				message.channel.send("le resultat est : **" + Dice+ "**");
-				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !dice ** used !')
+				clientDiscord.channels.get("460064153424494604").send('**:black_circle: !dice ** used !')
 		}
 	}
 
