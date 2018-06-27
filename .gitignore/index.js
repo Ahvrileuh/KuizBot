@@ -45,6 +45,11 @@ clientDiscord.login(process.env.TOKEN);
 		message.channel.send("il é tro faur")
 	}
 
+	if(message.content === prefix + "flood")
+	{
+		message.channel.send("Stoppez de flood svp !")
+	}
+
 	if(message.content === prefix + "bot[out]" && message.author.tag == "Avril#8268")
 	{
 		message.channel.send("///BOT OUT///");
@@ -443,8 +448,17 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 
 		if(message.content === prefix + "reset[JOSSE]")
 		{
-			name = "";
-			tag = "";
+			var Qresult = 0;
+			var TestMode = false;
+			var QuizzMode = false;
+			var red = 0;
+			var green = 0;
+			var blue = 0;
+			var yellow = 0;
+			var Dice = 0;
+			var Chance = 0;
+			var name = "";
+			var role = "";
 
 			message.channel.send("**/// BOT RESET ///**");
 			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !reset ** used !');
@@ -582,6 +596,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("**Dé à 6 faces lancé !**");
 				random();
 				message.channel.send("le resultat est : **" + Dice + "**") ;
+				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !dice ** used !');
 		}
 
 		if(message.content === "!dice[8]")
@@ -589,6 +604,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("**Dé à 8 faces lancé !**");
 				random8();
 				message.channel.send("le resultat est : **" + Dice + "**");
+				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !dice ** used !')
 		}
 
 		if(message.content === "!dice[100]")
@@ -596,6 +612,7 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 				message.channel.send("**Dé à 100 putain de faces lancé !**");
 				randomDICE100();
 				message.channel.send("le resultat est : **" + Dice+ "**");
+				clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: !dice ** used !')
 		}
 	}
 
