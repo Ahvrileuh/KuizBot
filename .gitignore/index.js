@@ -25,9 +25,19 @@ clientDiscord.on('ready', ()=> {
 clientDiscord.login(process.env.TOKEN);
 
 	clientDiscord.on('message', message => {
+
+	if(botOn == false){
+		if(message.content === prefix + "bot[on]")
+		{
+			message.channel.send("///BOT ON///");
+			clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  OUT** !');
+			botOn = true;
+		}
+	}
+
 	if(botOn == true){
+
 		const guildMember = message.member;
-		//guildMember.addRole(config.n);
 
 	if(message.content === prefix + "rom1")
 	{
@@ -38,6 +48,7 @@ clientDiscord.login(process.env.TOKEN);
 	{
 		message.channel.send("///BOT OUT///");
 		clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT  OUT** !');
+		botOn = false;
 	}
 
 	if(message.content === prefix + "cmd")
