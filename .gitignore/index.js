@@ -39,6 +39,11 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 
 	if(botOn == true){
 		const guildMember = message.member;
+	
+	if(message.content === prefix + "leopold")
+	{
+		message.channel.send("**roule bien sur tes morts sâle batard**")
+	}
 
 	if(message.content === prefix + "rom1")
 	{
