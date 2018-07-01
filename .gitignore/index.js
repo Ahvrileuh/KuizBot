@@ -208,6 +208,17 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 		);
 			TestMode = true;
 		}
+		
+		if(Qresult == 6)///////////////////////////////////////////////////////
+		{
+		
+			message.channel.send("**QUESTION DE LA SEMAINE N°7 :** *quel est le nom des principaux personnages dans Rayman Legends* (notez dans le chat '!A', '!B' ou '!C')"+
+			"``` Réponse A : Globox, Rayman et Sackboy```"+
+			"``` Réponse B : Rayman, Piranhas-Man et le DoomSlayer```"+
+			"``` Réponse C : Rayman, Globox et Ptizetre```"
+		);
+			TestMode = true;
+		}
 	}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	if(message.content === prefix + "A" && Qresult == 1 && TestMode == true && message.author.tag == tag)
@@ -318,7 +329,24 @@ if(message.content === prefix + "C" && Qresult == 5 && TestMode == true && messa
 		TestMode = false;
 	}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	if(message.content === prefix + "A" && Qresult == 7 && TestMode == true && message.author.tag == tag)
+	{
+		message.channel.send("c'est non ! Dommage !");
+		TestMode = false;
+	}
 
+	if(message.content === prefix + "B" && Qresult == 7 && TestMode == true && message.author.tag == tag)
+	{
+		message.channel.send("c'est non ! Dommage !");
+		TestMode = false;
+	}
+
+	if(message.content === prefix + "C" && Qresult == 7 && TestMode == true && message.author.tag == tag)
+	{
+		message.channel.send("**OUI OUI OUI OUI !** tu es un connaisseur toi !");
+		TestMode = false;
+	}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	if(message.content === prefix + "agencetousrisque")
 	{
 		
