@@ -209,7 +209,7 @@ clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA
 			TestMode = true;
 		}
 		
-		if(Qresult == 6)///////////////////////////////////////////////////////
+		if(Qresult == 7)///////////////////////////////////////////////////////
 		{
 		
 			message.channel.send("**QUESTION DE LA SEMAINE N°7 :** *quel est le nom des principaux personnages dans Rayman Legends* (notez dans le chat '!A', '!B' ou '!C')"+
@@ -689,7 +689,7 @@ function randomDICE100(min, max){
 
 function random10(min, max){
 	min = Math.ceil(1);
-	max = Math.floor(6);
+	max = Math.floor(7);
 	Qresult = Math.floor(Math.random() * (max - min + 1) + min);
 	console.log("JULIEN try a question !");
 	console.log("Question n°" + Qresult);
