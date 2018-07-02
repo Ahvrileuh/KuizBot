@@ -23,7 +23,7 @@ clientDiscord.on('ready', ()=> {
 	clientDiscord.channels.get("460064153424494604").send('**:arrow_forward: BOT READY** !');
 });
 
-clientDiscord.login('NDYxMzEwOTM5Mzk2OTY0MzUy.DhUwwA.f289z0X73g5Sz1scob68V0QBUeA');
+clientDiscord.login();
 
 	clientDiscord.on('message', message => {
 
